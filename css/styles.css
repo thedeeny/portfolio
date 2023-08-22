@@ -174,18 +174,6 @@ canvas {
   position: relative;
 }
 
-.main-text::before{ 
-  content: 'Bryn Deeny'; 
-  position: absolute; 
-  left: 31%;
-  transform: translateX(-50%);
-  top: 10px;
-  font-size: 5rem;
-  color: #deb99261; 
-  line-height: 7rem; 
-  font-weight: 700;
-  z-index: -1;
-}
 
 .main-text strong{
   color:#ffffff;
