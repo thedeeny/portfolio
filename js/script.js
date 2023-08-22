@@ -53,9 +53,15 @@ function preloaderBlock() {
   window.addEventListener && window.addEventListener("load", function() {
 	setTimeout(function() {
 	  document.body.className += " loaded";
-	  reveal(); // Trigger the reveal function after the preloader
+	  AOS.init({ // Initialize AOS after the preloader
+		once: true,
+	  });
+	  reveal(); // Trigger the reveal function after the preloader and AOS are initialized
 	}, 1100);
-  });
+	});
+
+
+  
   
   
   gsap.fromTo(
@@ -98,7 +104,7 @@ particlesJS("particles-js", {
 		}
 	  },
 	  "color": {
-		"value": "#deb992"
+		"value": "#ffffff"
 	  },
 	  "shape": {
 		"type": "circle",
