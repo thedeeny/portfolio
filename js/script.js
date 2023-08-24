@@ -54,7 +54,6 @@ function preloaderBlock() {
 	setTimeout(function() {
 	  document.body.className += " loaded";
 	  AOS.init({ // Initialize AOS after the preloader
-		once: true,
 	  });
 	  reveal(); // Trigger the reveal function after the preloader and AOS are initialized
 	}, 1100);
