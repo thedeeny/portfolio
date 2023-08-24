@@ -53,7 +53,7 @@ function preloaderBlock() {
   window.addEventListener && window.addEventListener("load", function() {
 	setTimeout(function() {
 	  document.body.className += " loaded";
-	  AOS.init({ // Initialize AOS after the preloader
+	  AOS.init({ // Initialize AOS after the preloader,
 	  });
 	  reveal(); // Trigger the reveal function after the preloader and AOS are initialized
 	}, 1100);
@@ -96,7 +96,7 @@ function preloaderBlock() {
 particlesJS("particles-js", {
 	"particles": {
 	  "number": {
-		"value": 195,
+		"value": 95,
 		"density": {
 		  "enable": true,
 		  "value_area": 2500.1476416322727
