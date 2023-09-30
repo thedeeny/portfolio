@@ -152,6 +152,9 @@ canvas {
   position: relative;
 }
 
+
+
+
 .main-img{
   max-width: 350px;
   max-height: 600px;
@@ -269,6 +272,7 @@ canvas {
   width: 100%;
   padding: 10px;
   border: 1px solid rgba(15,15,15);
+  border-radius: 15px;
 }
 
 .summery-details p {
@@ -318,6 +322,7 @@ canvas {
   background-color: transparent;
   padding: 10px 20px;
   border: 1px solid #deb992;
+  border-radius: 15px;
   margin-top: 10px;
   flex-wrap: wrap;
 }
@@ -468,6 +473,7 @@ canvas {
   color: #deb992;
   text-decoration: none;
   border: 2px solid #deb992;
+  border-radius: 15px;
   font-weight: 600;
   display: inline-block;
   transition: transform 200ms ease-out;
