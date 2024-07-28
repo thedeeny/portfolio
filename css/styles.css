@@ -68,7 +68,6 @@ canvas {
 .logo-name {
   color: #dda971;
   font-size: 20px;
-  letter-spacing: 4px;
   font-weight: bolder;
   align-items: center;
   justify-content: center;
@@ -113,7 +112,7 @@ canvas {
 }
 
 .logo-container{
-  max-width: 950px;
+  max-width: 1050px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -124,7 +123,6 @@ canvas {
   color: #ffffff;
   font-size: 2.4rem;
   font-weight: 700;
-  letter-spacing: 3px;
   text-decoration: none;
 }
 
@@ -199,6 +197,7 @@ canvas {
   margin: 30px 0px;
   letter-spacing: 3px;
   font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .main-text a,
@@ -266,13 +265,15 @@ canvas {
   max-width: 700px;
   width: 100%;
   padding: 10px;
-  border: 1px solid rgba(15,15,15);
+  border: 1px solid #deb992;
   border-radius: 15px;
 }
 
 .summery-details p {
+  font-family: 'Poppins', sans-serif;
   color: #999999;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  margin-bottom: 2em;
 }
 
 .summery-details strong {
@@ -282,50 +283,161 @@ canvas {
 }
 
 /* ... Your existing CSS code ... */
-
-#language {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+.tabs {
   max-width: 950px;
-  width: 100%;
-  margin: 80px auto 50px auto;
-  padding-bottom: 80px;
-}
-
-.language-box {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.language-box h3 {
-  font-size: 1.3rem;
-  color: #ffffff;
-  letter-spacing: 1px;
-}
-
-.language-box h3 span {
-  color: #deb992;
-  font-weight: 600;
-  font-size: 4rem;
-  line-height: 1.3rem;
-  user-select: none;
-}
-
-.language-box ul {
-  background-color: transparent;
-  padding: 10px 20px;
+  height: 100px;
   border: 1px solid #deb992;
-  border-radius: 15px;
-  margin-top: 10px;
-  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
-.language-box ul li {
-  color: #999;
-  margin-right: 20px;
-  margin-top: 4px;
+.tabs li {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4cfde;
+  transition: .5s;
+  cursor: pointer;
+  font-size: 18px;
+  margin:0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.tabs li:hover {
+  color: #deb992;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.active {
+  color: #deb992 !important;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.contents {
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  gap: 20px;
+  border: 1px solid #deb992;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px;
+  max-width: 950px;
+  animation: moving 1s ease;
+  -webkit-animation: moving 1s ease;
+}
+
+.box h3 {
+  color: #deb992;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.box p {
+  color: #999999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(-50px);
+    -webkit-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -o-transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .tabs {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .tabs li {
+    width: 100%;
+    height: 50px;
+  }
+
+  .contents {
+    width: 90%;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .box h3 {
+    font-size: 1.5rem;
+  }
+
+  .box p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs li {
+    height: 40px;
+  }
+
+  .box h3 {
+    font-size: 1.25rem;
+  }
+
+  .box p {
+    font-size: 1rem;
+  }
 }
 
 /*============END OF ABOUT-ME SECTION============*/
@@ -343,7 +455,6 @@ canvas {
   min-height: 100vh;
   padding: 100px 15px;
   margin-top: -70px;
-  word-spacing: normal;
 }
 
 .timeline-section strong {
@@ -404,9 +515,8 @@ canvas {
 }
 
 .timeline-content p {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
   text-align: justify;
 }
 
@@ -446,6 +556,10 @@ canvas {
   }
   .timeline-dot{
     left:0;
+  }
+  .timeline-content p {
+    font-size: 1rem;
+    
   }
 }
 
@@ -488,6 +602,7 @@ canvas {
   margin: 80px auto;
   padding-bottom: 50px;
   position: relative;
+  
 }
 #projects::before{
   content: '';
@@ -519,7 +634,7 @@ canvas {
 
 .projects-container{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 20px;
   max-width: 1050px;
   margin: 50px auto;
@@ -532,6 +647,7 @@ canvas {
   overflow: hidden;
   position: relative;
   background-color: #000000;
+  
 }
 .project-box img{
   width: 100%;
@@ -552,6 +668,10 @@ canvas {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 65%, rgb(0, 0, 0,0.85) 100%);
   padding: 30px 30px;
   transition: all ease 0.6s;
+  background-color: inherit; /* Inherits the background color from project-box */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1; /* Position it behind the image */
 }
 .p-ovrerlay strong{
   font-size:2rem;
@@ -799,6 +919,7 @@ text-decoration: none;
   }
   .summery-details p {
     margin: 10px 0;
+    font-size: 1rem;
   }
 }
 
